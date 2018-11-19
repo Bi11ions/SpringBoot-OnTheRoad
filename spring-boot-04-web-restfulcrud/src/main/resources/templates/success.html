@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+
+    <h1>Success</h1>
+    <!-- th:text 将div里的文本设置为 -->
+    <div th:text="${hello}">
+        这里显示的是欢迎消息
+    </div>
+    <hr/>
+
+    <!-- th:each 每次遍历都会生成当前这个标签！ -->
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+    <hr/>
+
+</body>
+</html>

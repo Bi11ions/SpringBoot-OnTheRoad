@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://47.106.240.136:3307/jpa
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update #更新或创建数据表, 底层使用 Hibernate
+    show-sql: true
+
+
