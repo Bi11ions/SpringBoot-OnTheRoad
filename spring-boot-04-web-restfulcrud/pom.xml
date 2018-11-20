@@ -79,6 +79,12 @@
             <version>3.7</version>
         </dependency>
 
+        <!-- SpringBoot 热部署，后端修改代码后，按 ctrl+f9 完成直接刷新，不需要重启项目 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
 
     </dependencies>
 

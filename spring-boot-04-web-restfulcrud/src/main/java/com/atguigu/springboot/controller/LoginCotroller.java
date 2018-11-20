@@ -32,8 +32,6 @@ public class LoginCotroller {
             map.put("msg", "用户名密码错误！");
             return "login";
         }
-
-
     }
 
 }

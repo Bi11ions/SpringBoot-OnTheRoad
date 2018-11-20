@@ -19,7 +19,7 @@ public class SpringBoot04WebRestfulcrudApplicationTests {
 
     @Test
     public void testFastDFS() {
-        StorePath storePath = FastDFSClient.uploadFile(new File("G:/我的图片/vladstudio_alchemy_2560x1600.jpg"));
+        StorePath storePath = FastDFSClient.uploadFile(new File("C:/Users/abb/Desktop/goods001.jpg"));
         System.out.println(storePath.getPath());
         System.out.println(storePath.getFullPath());
         FastDFSClient.getResAccessUrl(storePath.getFullPath());
