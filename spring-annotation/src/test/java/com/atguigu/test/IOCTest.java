@@ -1,8 +1,10 @@
 package com.atguigu.test;
 
+import com.atguigu.bean.Green;
 import com.atguigu.bean.Person;
 import com.atguigu.config.MainConfig;
 import com.atguigu.config.MainConfig2;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,6 +16,7 @@ import java.util.Map;
  * @author wangsen@qgutech.com
  * @since 2018/12/18 14:06
  */
+@Slf4j
 public class IOCTest {
     private ApplicationContext context = new AnnotationConfigApplicationContext(MainConfig2.class);
 
@@ -57,6 +60,13 @@ public class IOCTest {
     @Test
     public void testImport() {
         printBeans(context);
+        Green bean = context.getBean(Green.class);
+        System.out.println(bean);
+
+        Object colorFactoryBean = context.getBean("colorFactoryBean");
+        Object beanSelf = context.getBean("&colorFactoryBean");
+        System.out.println(colorFactoryBean);
+        System.out.println(beanSelf);
     }
 
     private void printBeans(ApplicationContext context) {
